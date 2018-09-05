@@ -61,7 +61,7 @@ def plot_stock(stock=test_stock, year=test_year, month=test_month):
     
     # Check for valid year formatting
     year = str(year)
-    if len(year) != 4:
+    if len(year) != 4 or not year.isdigit():
         return "PLEASE ENTER A VALID 4-DIGIT YEAR!!"
     
     # If needed, transform the month into the 2-digit form
