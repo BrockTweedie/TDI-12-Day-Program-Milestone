@@ -6,13 +6,18 @@
     <meta name="description" content="Skeleton application demoing Heroku and Flask integration.">
     <meta name="author" content="@gotoariel">
     <!-- <link rel="icon" href="favicon.ico"> -->
+    
+    <title>Plot My Stock</title>
 
-    <title>Wilkommen, bienvenue, and welcome to Heroku!</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Load CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="http://www.csszengarden.com/221/221.css">
+    <link rel="stylesheet" type="text/css" href="static/mycss.css">
+    <!-- <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'> -->
+    <!-- <link rel="stylesheet" href="https://github.com/bev-a-tron/MyFlaskTutorial/raw/master/static/style_lulu.css"> -->
   </head>
-  <body>
+  <body style="margin:40px">
+    <!--
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-left">
@@ -27,6 +32,30 @@
         </div>
       </div>
     </div>
+    -->
+
+    <h1>Plot My Stock</h1>
+    <div class=metanav>
+      <h3>
+	What <a href="/stocks">stock</a>/year/month would you like to see plotted?<br>
+	We'll show you how the closing price varied per day over that month.
+      </h3>
+      <form id='userinfoform' method='post' action='/make_plot'>
+	<p>
+	  <a href="/stocks">Stock Name</a>: <input type='text' name='stock' />
+	</p>
+	<p>
+	  Year: <input type='text' name='year' />
+	</p>
+	<p>
+	  Month: <input type='text' name='month' />
+	</p>
+	<p>
+	  <input type='submit' value='SUBMIT' />
+	</p>
+      </form>
+    </div>
+    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
