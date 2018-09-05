@@ -1,6 +1,3 @@
-# posssibly include in requirements.txt?:
-# heroku config:add BUILDPACK_URL=https://github.com/kennethreitz/conda-buildback.git
-
 
 from   flask import Flask, render_template, request, redirect, Response
 from   bokeh.embed import components
