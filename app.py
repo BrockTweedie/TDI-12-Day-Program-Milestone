@@ -1,4 +1,3 @@
-
 from   flask import Flask, render_template, request, redirect, Response
 from   bokeh.embed import components
 
@@ -48,12 +47,12 @@ test_stock = 'AAPL'
 test_year = '2017'
 test_month = '09'
 
-month_dictionary = {'January':'01', 'February':'02', 'March':'03', 'April':'04',
-                    'May':'05', 'June':'06', 'July':'07', 'August':'08', 'September':'09',
-                    'October':'10', 'November':'11', 'December':'12',
-                    'Jan':'01', 'Feb':'02', 'Mar':'03', 'Apr':'04',
-                    'May':'05', 'Jun':'06', 'Jul':'07', 'Aug':'08', 'Sep':'09',
-                    'Oct':'10', 'Nov':'11', 'Dec':'12'}
+month_dictionary = {'JANUARY':'01', 'FEBRUARY':'02', 'MARCH':'03', 'APRIL':'04',
+                    'MAY':'05', 'JUNE':'06', 'JULY':'07', 'AUGUST':'08', 'SEPTEMBER':'09',
+                    'OCTOBER':'10', 'NOVEMBER':'11', 'DECEMBER':'12',
+                    'JAN':'01', 'FEB':'02', 'MAR':'03', 'APR':'04',
+                    'MAY':'05', 'JUN':'06', 'JUL':'07', 'AUG':'08', 'SEP':'09',
+                    'OCT':'10', 'NOV':'11', 'DEC':'12'}
 
 def plot_stock(stock=test_stock, year=test_year, month=test_month):
 
@@ -65,7 +64,7 @@ def plot_stock(stock=test_stock, year=test_year, month=test_month):
         return "PLEASE ENTER A VALID 4-DIGIT YEAR!!"
     
     # If needed, transform the month into the 2-digit form
-    month = str(month)
+    month = str(month).upper()
     if month in month_dictionary:
         month = month_dictionary[month]
     if month.isdigit() and int(month) >= 1 and int(month) <= 12:
