@@ -1,3 +1,4 @@
+import os
 from   flask import Flask, render_template, request, redirect, Response
 from   bokeh.embed import components
 
@@ -107,4 +108,6 @@ def plot_stock(stock=test_stock, year=test_year, month=test_month):
 
 
 if __name__ == '__main__':
-  app.run(port=33507)
+  #app.run(port=33507)
+  port = int(os.environ.get("PORT", 33507))
+  app.run(host='0.0.0.0', port=port)
