@@ -6,9 +6,9 @@ from   bokeh.embed import components
 import pandas as pd
 from   bokeh.plotting import figure, output_file, show
 import quandl
-my_api_key = 'L2BgXpq4eVihjReXAR64'
+my_api_key = str(os.getenv('QUANDL_API_KEY'))
 quandl.ApiConfig.api_key = my_api_key
-
+print(my_api_key)
 
 app = Flask(__name__)
 
