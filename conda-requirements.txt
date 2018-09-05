@@ -3,5 +3,4 @@ bokeh
 dill
 flask
 jinja2
-pip
 simplejson
