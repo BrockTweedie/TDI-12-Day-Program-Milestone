@@ -1,4 +1,4 @@
-gunicorn
+gunicorn=19.9.0
 requests==2.21.0
 quandl==3.4.2
 pandas==0.24.1
