@@ -3,4 +3,5 @@ requests==2.21.0
 quandl==3.4.2
 pandas==0.24.1
 bokeh==1.0.4
+flask==1.0.2
 pip==9.0.2
