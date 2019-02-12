@@ -12,10 +12,9 @@ def index():
 
 @app.route('/make_plot', methods=['POST'])
 def make_plot():
-  stock = request.form['stock']
-  year = request.form['year']
-  month = request.form['month']
-  p = plot_stock_module.plot_stock(stock=stock, year=year, month=month)
+  p = plot_stock_module.plot_stock(stock=request.form['stock'],
+                                   year=request.form['year'],
+                                   month=request.form['month'])
   if isinstance(p, str):
     # returned error message instead of a plot
     return p
